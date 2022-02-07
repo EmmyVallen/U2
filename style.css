@@ -3,7 +3,7 @@
 /* ----- Grundstil för webbsidan ----- */
 
 html {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 html, body {
@@ -19,7 +19,7 @@ html, body, nav, header, main, aside, footer, article, section, div {
 /* ----- Layout ----- */
 
 body {
-    background-color: #e1d5b7;
+    background-color: white;
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
