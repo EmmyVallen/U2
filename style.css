@@ -39,7 +39,7 @@ body {
 
 nav {
     grid-area: nav;
-    background-color: #4fcd6c;
+    background-color: pink;
 }
 
 nav ul {
@@ -58,12 +58,13 @@ nav a {
 }
 
 nav a:link, nav a:visited {
-    color: #0d5712;
+    color: purple;
 }
 
 nav a:hover, nav a:active {
-    background-color: #20985a;
-    color: #274606;
+    background-color: none;
+    color: grey;
+    
 }
 
 nav a.thisPage::before {
@@ -78,10 +79,10 @@ img{
 header {
     grid-area: header;
     background-color: #d89228;
-    background-image: url(../img/trees.jpg);
+    background-image: url();
     background-size: cover;
     background-position: bottom;
-    color: #FFFFFF;
+    color: black;
     padding: 10px;
 }
 
@@ -92,19 +93,19 @@ header h1 {
 
 main {
     grid-area: main;
-    background-color: #ededa0;
+    background-color: white;
     padding: 10px;
 }
 
 aside {
     grid-area: aside;
-    background-color: #da6f57;
+    background-color: pink;
     padding: 10px;
 }
 
 footer {
     grid-area: footer;
-    background-color: #2886d8;
+    background-color: pink;
     padding: 10px;
 }
 
