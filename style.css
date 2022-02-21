@@ -1,60 +1,46 @@
 @charset "UTF-8";
 
-/* ----- Grundstil för webbsidan ----- */
 
-html {
-    font-size: 20px;
-}
-
-html, body {
-    height: 100%;
-}
-
-html, body, nav, header, main, aside, footer, article, section, div {
+html, body, nav, header, main, footer, div {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
-
-/* ----- Layout ----- */
 
 body {
     background-color: white;
     color: #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(bilder/background.jpg);
+    background-size: 150%;
+    font-family:Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-columns: auto 150px minmax(300px,650px) 200px auto;
-    grid-template-rows: 250px auto 70px;
+    grid-template-columns: auto 150px minmax(300px,650px) 300px auto;
+    grid-template-rows: 250px auto 80px;
     grid-template-areas:
         "header header header header header"
-        ".      nav    main   aside  ."
+        ".nav    main   aside."
         "footer footer footer footer footer";
-}
-
-/* ----- Utformning av navigeringen ----- */
-
-#menuicon, #menucheckbox {
-    display: none;
 }
 
 nav {
     grid-area: nav;
+    font-size: 20px;
+    font-weight: bold;
     background-color: pink;
+
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 10px;
     display: flex;
-    gap: 0.5rem;
     flex-direction: column;
 }
 
 nav a {
     text-decoration: none;
-    display: block;
-    padding: 0.4rem;
+    display: flex;
+    padding: 10px;
 }
 
 nav a:link, nav a:visited {
@@ -63,60 +49,45 @@ nav a:link, nav a:visited {
 
 nav a:hover, nav a:active {
     background-color: none;
+    text-decoration: underline;
     color: grey;
     
 }
 
-nav a.thisPage::before {
-    content: "-- ";
-}
-
-/* ------ Slut på  navigering ----- */
-img{
-    max-width: 100%;
-}
-
 header {
     grid-area: header;
-    background-color: #d89228;
-    background-image: url();
+    background-color: white;
+    background-image: url(bilder/banner.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     color: black;
-    padding: 10px;
-}
-
-header h1 {
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 0;
 }
 
 main {
     grid-area: main;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
 }
 
 aside {
     grid-area: aside;
+    font-size: 20px;
     background-color: pink;
     padding: 10px;
 }
 
 footer {
     grid-area: footer;
+    background-image: url(bilder/footer.jpg);
+    background-size: cover;
     background-color: pink;
     padding: 10px;
 }
 
-.floatImg {
-    float: right;
-    width: 200px;
-}
-@media only screen and (min-width_768px) {
-    .img-banner{
-        display: block;
-        width: 100%;
-        padding-bottom: 30px;
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
     }
-}
+  }
