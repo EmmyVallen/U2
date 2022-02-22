@@ -8,7 +8,7 @@ html, body, nav, header, main, footer, div {
 }
 
 body {
-    background-color: white;
+
     color: #000000;
     background-image: url(bilder/background.jpg);
     background-size: 150%;
@@ -20,6 +20,29 @@ body {
         "header header header header header"
         ".nav    main   aside."
         "footer footer footer footer footer";
+}
+.box{
+    position: relative;
+    display: inline-block;
+    margin-right: 2em;
+}
+.box div{
+    position: absolute;
+    border: 2px solid black;
+    margin: 0;
+    padding: 10px;
+    width: 200px;
+}
+#box1{
+    background-color: pink;
+}
+#showbox1 ~ div{
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform o.5s;
+}
+#showbox1:checked ~ div{
+transform: scaleY(1);
 }
 
 nav {
@@ -77,31 +100,19 @@ aside {
     padding: 10px;
 }
 
+img{
+    width: 250px;
+}
 footer {
     grid-area: footer;
     background-image: url(bilder/footer.jpg);
     background-size: cover;
     background-color: pink;
-    padding: 10px;
+    
 }
 
-/* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
+@media only screen and (max-width: 400px) {
+    body {
+      background-color: lightblue;
+    }
   }
-}
