@@ -14,35 +14,12 @@ body {
     background-size: 150%;
     font-family:Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-columns: auto 150px minmax(300px,650px) 300px auto;
+    grid-template-columns: auto 170px minmax(300px,650px) 300px auto;
     grid-template-rows: 250px auto 80px;
     grid-template-areas:
         "header header header header header"
         ".nav    main   aside."
         "footer footer footer footer footer";
-}
-.box{
-    position: relative;
-    display: inline-block;
-    margin-right: 2em;
-}
-.box div{
-    position: absolute;
-    border: 2px solid black;
-    margin: 0;
-    padding: 10px;
-    width: 200px;
-}
-#box1{
-    background-color: pink;
-}
-#showbox1 ~ div{
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform o.5s;
-}
-#showbox1:checked ~ div{
-transform: scaleY(1);
 }
 
 nav {
@@ -50,13 +27,12 @@ nav {
     font-size: 20px;
     font-weight: bold;
     background-color: pink;
-
+    
 }
 
 nav ul {
     list-style: none;
     padding: 10px;
-    display: flex;
     flex-direction: column;
 }
 
@@ -75,6 +51,32 @@ nav a:hover, nav a:active {
     text-decoration: underline;
     color: grey;
     
+}
+.box{
+    position: relative;
+    margin-right: 2em;
+    padding-top: 5px; 
+}
+.box div{
+    position: absolute;
+    margin: 10px;
+    padding: 10px;
+    width: 135px;
+    border: solid rgb(255, 88, 116);
+    border-radius: 10px;
+    margin-left: 5px;
+}
+#box1{
+    background-color: rgb(255, 88, 116);
+    
+}
+#showbox1 ~ div{
+    transform: scaleY(0);
+    transition: 1s;
+    
+}
+#showbox1:checked ~ div{
+transform: scaleY(1);
 }
 
 header {
@@ -101,7 +103,10 @@ aside {
 }
 
 img{
-    width: 250px;
+    width: 280px;
+    border: solid pink;
+    border-radius: 30px;
+
 }
 footer {
     grid-area: footer;
