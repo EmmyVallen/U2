@@ -11,11 +11,11 @@ body {
 
     color: #000000;
     background-image: url(bilder/background.jpg);
-    background-size: 150%;
+    background-size: 100%;
     font-family:Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-columns: auto 170px minmax(300px,650px) 300px auto;
-    grid-template-rows: 250px auto 80px;
+    grid-template-columns: auto 200px minmax(300px,650px) 300px auto;
+    grid-template-rows: 250px auto 70px;
     grid-template-areas:
         "header header header header header"
         ".nav    main   aside."
@@ -24,6 +24,7 @@ body {
 
 nav {
     grid-area: nav;
+    padding-left: 10px;
     font-size: 20px;
     font-weight: bold;
     background-color: pink;
@@ -61,7 +62,7 @@ nav a:hover, nav a:active {
     position: absolute;
     margin: 10px;
     padding: 10px;
-    width: 135px;
+    width: 90%;
     border: solid rgb(255, 88, 116);
     border-radius: 10px;
     margin-left: 5px;
@@ -98,14 +99,15 @@ main {
 aside {
     grid-area: aside;
     font-size: 20px;
+    max-width: 70%;
     background-color: pink;
-    padding: 10px;
+    padding: 10%;
 }
 
 img{
-    width: 280px;
+    max-width: 100%;
     border: solid pink;
-    border-radius: 30px;
+    border-radius: 10px;
 
 }
 footer {
@@ -116,8 +118,77 @@ footer {
     
 }
 
-@media only screen and (max-width: 400px) {
-    body {
-      background-color: lightblue;
+@media screen and (max-width: 500px) {
+    nav {
+        grid-area: nav;
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: pink;
+        
     }
-  }
+    
+    nav ul {
+        list-style: none;
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    nav a {
+        text-decoration: none;
+        display: flex;
+        padding: 10px;
+    }
+    
+    nav a:link, nav a:visited {
+        color: purple;
+    }
+    
+    nav a:hover, nav a:active {
+        background-color: none;
+        text-decoration: underline;
+        color: grey;
+        
+    }
+    .box{
+        position: relative;
+        margin-right: 2em;
+        padding-top: 5px; 
+    }
+    .box div{
+        position: absolute;
+        margin: 10px;
+        padding: 10px;
+        width: 90%;
+        border: solid black;
+        border-radius: 10px;
+        margin-left: 5px;
+    }
+    #box1{
+        background-color: rgb(255, 88, 116);
+        
+    }
+    #showbox1 ~ div{
+        transform: scaleY(0);
+        transition: 1s;
+        
+    }
+      
+}
+  @media screen and (max-width: 1000px) {
+     body{
+        background-size: 100%;
+        display: grid;
+        grid-template-columns: 80px 200px minmax(200px,650px) 300px auto;
+    }
+
+}
+    @media screen and (max-width: 500px) {
+        main {
+          background-color: lightblue;
+        }
+        
+        img{
+            border: solid black;
+        }
+    }
