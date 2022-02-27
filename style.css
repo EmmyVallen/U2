@@ -118,43 +118,16 @@ footer {
     
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     nav {
         grid-area: nav;
         padding-left: 10px;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bold;
         background-color: pink;
         
     }
-    
-    nav ul {
-        list-style: none;
-        padding: 10px;
-        flex-direction: column;
-    }
-    
-    nav a {
-        text-decoration: none;
-        display: flex;
-        padding: 10px;
-    }
-    
-    nav a:link, nav a:visited {
-        color: purple;
-    }
-    
-    nav a:hover, nav a:active {
-        background-color: none;
-        text-decoration: underline;
-        color: grey;
-        
-    }
-    .box{
-        position: relative;
-        margin-right: 2em;
-        padding-top: 5px; 
-    }
+  
     .box div{
         position: absolute;
         margin: 10px;
@@ -164,31 +137,34 @@ footer {
         border-radius: 10px;
         margin-left: 5px;
     }
-    #box1{
-        background-color: rgb(255, 88, 116);
-        
-    }
-    #showbox1 ~ div{
-        transform: scaleY(0);
-        transition: 1s;
-        
-    }
+    main {
+        background-color: lightblue;
+      }
       
+      img{
+          border: solid black;
+          max-width: 100%;
+            border: solid pink;
+            border-radius: 10px;
+      }
 }
   @media screen and (max-width: 1000px) {
      body{
-        background-size: 100%;
+        background-size: 50%;
         display: grid;
         grid-template-columns: 80px 200px minmax(200px,650px) 300px auto;
     }
 
 }
-    @media screen and (max-width: 500px) {
-        main {
-          background-color: lightblue;
+    @media screen and (min-width: 1000px) {
+        body{
+            display: grid;
+    grid-template-columns: auto 200px minmax(300px,650px) 500px auto;
         }
-        
         img{
-            border: solid black;
+            max-width: 100%;
+            border: solid pink;
+            border-radius: 10px;
+        
         }
     }
