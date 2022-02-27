@@ -28,9 +28,26 @@ nav {
     font-size: 20px;
     font-weight: bold;
     background-color: pink;
-    
 }
 
+nav a{
+display: flex;
+padding: 5px;
+text-decoration: none;
+color: black;
+}
+
+nav a:hover{
+    width: 100px;
+    border-radius: 20px;
+    border: solid light rgb(184, 184, 184);
+    background: rgb(184, 184, 184);
+    transform: scaleY(1.5);
+    transition: 1s;
+}
+nav a:visited{
+color: rgb(255, 0, 212);
+}
 header {
     grid-area: header;
     background-color: white;
@@ -78,15 +95,6 @@ footer {
         
     }
   
-    .box div{
-        position: absolute;
-        margin: 10px;
-        padding: 10px;
-        width: 90%;
-        border: solid black;
-        border-radius: 10px;
-        margin-left: 5px;
-    }
     main {
         background-color: lightblue;
         font-size: 25px;
