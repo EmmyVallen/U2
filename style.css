@@ -40,7 +40,7 @@ color: black;
 nav a:hover{
     width: 100px;
     border-radius: 20px;
-    border: solid light rgb(184, 184, 184);
+    border: solid rgb(184, 184, 184);
     background: rgb(184, 184, 184);
     transform: scaleY(1.5);
     transition: 1s;
