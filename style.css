@@ -152,7 +152,7 @@ footer {
 @media screen and (max-width: 600px) {
     body {
         display: grid;
-        grid-template-columns: auto 200px 600px 300px auto;
+        grid-template-columns: auto 200px 500px 300px auto;
         grid-template-rows: 170px auto ;
         
     }
