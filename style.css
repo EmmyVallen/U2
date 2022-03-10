@@ -48,6 +48,7 @@ nav a:hover{
 nav a:visited{
 color: rgb(255, 0, 212);
 }
+
 header {
     grid-area: header;
     background-color: white;
@@ -108,17 +109,30 @@ footer {
       
 }
 @media screen and (max-width: 600px) {
-    body {
-        display: grid;
-        grid-template-columns: auto 200px 500px 300px auto;
-        grid-template-rows: 170px auto ;
-        
+    header {
+        background-image: none;   
+        background-color: pink;
     }
 }
     @media screen and (max-width: 1160px) {
       body{
-        display: grid;
-        grid-template-columns: 50px 250px 300px 500px 50px;
+        grid-template-columns: auto minmax(300px,400px) 250px;
+
+grid-template-rows: auto 150px auto;
+
+grid-template-areas:
+".      nav   nav   ."
+  "header header header header"
+
+  ".      main   aside  .";
+        }
+        nav a:hover{
+            width: 100px;
+            border-radius: none;
+           border-style:dotted;
+            background: none;
+            transform: none;
+            transition: none;
         }
         img{
             max-width: 100%;
